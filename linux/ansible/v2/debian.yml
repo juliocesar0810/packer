@@ -1,0 +1,7 @@
+---
+- name: Upgrade all Debian packages
+  become: yes
+  apt:
+    update_cache: yes
+    upgrade: dist
+  

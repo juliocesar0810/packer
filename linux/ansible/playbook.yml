@@ -1,0 +1,18 @@
+---
+  - name: 'Linux distros upgrade'
+    hosts: default
+    become: yes
+    become_method: sudo
+    tasks:
+      - name: Upgrade all Debian packages
+        become: yes
+        apt:
+          update_cache: yes
+          upgrade: dist
+        when: ansible_facts['os_family'] == "Debian"
+
+      - name: Upgrade all RedHat packages
+        yum:
+          name: '*'
+          state: latest
+        when: ansible_facts['os_family'] == "RedHat"

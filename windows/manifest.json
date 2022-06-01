@@ -1,0 +1,23 @@
+{
+  "builds": [
+    {
+      "name": "windows-2016",
+      "builder_type": "amazon-ebs",
+      "build_time": 1650451127,
+      "files": null,
+      "artifact_id": "eu-west-1:ami-0d11872204e116a0d",
+      "packer_run_uuid": "3bc28c13-ce11-e3a4-ac7c-8bae766ae66e",
+      "custom_data": null
+    },
+    {
+      "name": "windows-2019",
+      "builder_type": "azure-arm",
+      "build_time": 1650533522,
+      "files": null,
+      "artifact_id": "/subscriptions/aa3930a3-3762-49e2-b88e-38bc0581dfb3/resourceGroups/myPackerGroup/providers/Microsoft.Compute/images/packer-windows-demo-20220421092216",
+      "packer_run_uuid": "a21401b9-01a5-36ce-0d47-2b11f89a9a64",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "a21401b9-01a5-36ce-0d47-2b11f89a9a64"
+}

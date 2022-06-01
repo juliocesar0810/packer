@@ -1,0 +1,11 @@
+---
+  - name: 'Linux update'
+    hosts: default
+    tasks:
+      - name: Apply conditional to all imported tasks
+        import_tasks: debian.yml
+        when: ansible_facts['os_family'] == "Debian"
+
+      - name: Apply conditional to all imported tasks
+        import_tasks: redhat.yml
+        when: ansible_facts['os_family'] == "RedHat"
